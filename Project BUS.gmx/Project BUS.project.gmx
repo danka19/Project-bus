@@ -6,17 +6,24 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_passenger</sprite>
     <sprites name="bus_editor">
       <sprite>sprites\spr_bus</sprite>
       <sprite>sprites\spr_load</sprite>
       <sprite>sprites\spr_save</sprite>
     </sprites>
+    <sprites name="gameplay">
+      <sprite>sprites\spr_bus2</sprite>
+      <sprite>sprites\spr_passenger</sprite>
+      <sprite>sprites\spr_passenger_seat</sprite>
+    </sprites>
+    <sprite>sprites\spr_collision_l</sprite>
+    <sprite>sprites\spr_entrance</sprite>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="tilesets">
       <background>background\tls_bus</background>
       <background>background\tls_default</background>
+      <background>background\tls_bus_2</background>
     </backgrounds>
   </backgrounds>
   <paths name="paths"/>
@@ -30,9 +37,18 @@
       <object>objects\obj_save</object>
       <object>objects\obj_load</object>
     </objects>
+    <objects name="gameplay">
+      <object>objects\obj_bus2</object>
+      <object>objects\obj_passenger</object>
+      <objects name="region">
+        <object>objects\reg_collision</object>
+        <object>objects\reg_entrance</object>
+      </objects>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
+    <room>rooms\rm_bus</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
