@@ -9,6 +9,8 @@
     <sprite>sprites\spr_passenger</sprite>
     <sprites name="bus_editor">
       <sprite>sprites\spr_bus</sprite>
+      <sprite>sprites\spr_load</sprite>
+      <sprite>sprites\spr_save</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -18,8 +20,16 @@
     </backgrounds>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_save.gml</script>
+    <script>scripts\scr_load.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_bus</object>
+    <objects name="bus_editor">
+      <object>objects\obj_save</object>
+      <object>objects\obj_load</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
