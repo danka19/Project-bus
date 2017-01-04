@@ -160,9 +160,9 @@ scr_ai_passenger();
             <kind>1</kind>
             <string>
 
+
+
 draw_self();
-
-
 if phy_speed_x &gt; 0 || phy_speed_x &lt; 0 || phy_speed_y &gt; 0 || phy_speed_y &lt; 0
  {image_speed=0.25};
 else
