@@ -60,35 +60,43 @@ physics_mass_properties(5,0,0,phy_inertia)
           <argument>
             <kind>1</kind>
             <string>
+if phy_rotation&lt;0
+ {phy_rotation=360};
+if phy_rotation&gt;360
+ {phy_rotation=0};
+ 
+
 
 /// M O V E M E N T
 
 if keyboard_check(ord('W'))
- {physics_apply_local_impulse(0,0,0,-10)};
+ {physics_apply_local_impulse(0,0,10,0)};
 if keyboard_check(ord('S'))
- {physics_apply_local_impulse(0,0,0,10)};
+ {physics_apply_local_impulse(0,0,-10,0)};
  
 if keyboard_check(ord('A'))
  {phy_rotation-=5};
 if keyboard_check(ord('D'))
  {phy_rotation+=5};
  
+ 
 //  A I
-/*
-var inst,angle;
+
+var inst,angle,rot;
  inst = instance_nearest(x,y,reg_entrance);
  angle = round(point_direction(x,y,inst.x,inst.y));
-if round(phy_rotation) != round(angle)
+ rot = round(phy_rotation);
+ if rot != 360 - angle
   {
-  if round(phy_rotation) &gt; round(angle)
-   {phy_rotation -= 1;};
-  else
-   {phy_rotation += 1;};
+  if rot &gt; 360 - angle
+   {phy_rotation -=1};
+  else 
+   {phy_rotation +=1};
   };
-else 
- {
-// {physics_apply_local_impulse(0,0,0,-1)};
- };
+ else
+  {
+  {physics_apply_local_impulse(0,0,15,0)};
+  };
  
 /*
  var x1, y1, x2, y2; 
@@ -120,6 +128,28 @@ else
           <argument>
             <kind>1</kind>
             <string>//COLLISION YEAH</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_passenger">
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// COLLISION RRAAAARWR!</string>
           </argument>
         </arguments>
       </action>
@@ -164,9 +194,8 @@ draw_text(12,36,string('PHY_SPEED_Y = ')+string(phy_speed_y));
 */
 
 
-
 draw_text(12,12,string('POINT_DIRECTION (ANGLE) = ')+string(round(point_direction(x,y,instance_nearest(x,y,reg_entrance).x,instance_nearest(x,y,reg_entrance).y))));
-draw_text(12,24,string('PHY_ROTATION = ')+string(round(phy_rotation)));
+draw_text(12,24,string('PHY_ROTATION = ')+string(abs(round(phy_rotation))));
 </string>
           </argument>
         </arguments>

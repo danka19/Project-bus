@@ -26,6 +26,7 @@
       <background>background\tls_default</background>
       <background>background\tls_bus_2</background>
     </backgrounds>
+    <background>background\bgr_stop</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">

@@ -30,7 +30,7 @@
     <yoffset>0</yoffset>
   </makerSettings>
   <backgrounds>
-    <background visible="-1" foreground="0" name="bgr_road" x="72" y="0" htiled="0" vtiled="-1" hspeed="0" vspeed="1" stretch="0"/>
+    <background visible="-1" foreground="0" name="bgr_stop" x="72" y="0" htiled="0" vtiled="0" hspeed="0" vspeed="1" stretch="-1"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -73,8 +73,8 @@
     <instance objName="reg_collision" x="144" y="357" name="inst_581B9512" locked="0" code="" scaleX="8" scaleY="0.125" colour="4294967295" rotation="0"/>
     <instance objName="reg_collision" x="168" y="357" name="inst_E0FBFEAB" locked="0" code="" scaleX="5" scaleY="0.125" colour="4294967295" rotation="0"/>
     <instance objName="&lt;undefined&gt;" x="0" y="0" name="inst_EF4425E7" locked="0" code="" scaleX="0" scaleY="0" colour="0" rotation="0"/>
-    <instance objName="reg_entrance" x="177" y="288" name="inst_0E2F8B13" locked="0" code="" scaleX="5" scaleY="8" colour="4294967295" rotation="0"/>
-    <instance objName="reg_entrance" x="177" y="192" name="inst_CB0213DF" locked="0" code="" scaleX="5" scaleY="8" colour="4294967295" rotation="0"/>
+    <instance objName="reg_entrance" x="194" y="296" name="inst_0E2F8B13" locked="0" code="" scaleX="5" scaleY="8" colour="4294967295" rotation="0"/>
+    <instance objName="reg_entrance" x="194" y="200" name="inst_CB0213DF" locked="0" code="" scaleX="5" scaleY="8" colour="4294967295" rotation="0"/>
     <instance objName="obj_passenger" x="264" y="264" name="inst_D09E504F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="reg_collision" x="129" y="357" name="inst_32CB6EBE" locked="0" code="" scaleX="5" scaleY="0.125" colour="4294967295" rotation="0"/>
     <instance objName="reg_collision" x="144" y="357" name="inst_4B5102CF" locked="0" code="" scaleX="8" scaleY="0.125" colour="4294967295" rotation="0"/>
