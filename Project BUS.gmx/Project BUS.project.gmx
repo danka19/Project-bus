@@ -16,8 +16,15 @@
       <sprite>sprites\spr_passenger</sprite>
       <sprite>sprites\spr_passenger_seat</sprite>
     </sprites>
-    <sprite>sprites\spr_collision_l</sprite>
-    <sprite>sprites\spr_entrance</sprite>
+    <sprites name="regions">
+      <sprite>sprites\spr_entrance</sprite>
+      <sprite>sprites\spr_bus_inside</sprite>
+      <sprite>sprites\spr_collision_l</sprite>
+    </sprites>
+    <sprites name="SEATS">
+      <sprite>sprites\spr_SEAT_24x24</sprite>
+      <sprite>sprites\spr_SEAT_USUAL</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bgr_road</background>
@@ -27,11 +34,17 @@
       <background>background\tls_bus_2</background>
     </backgrounds>
     <background>background\bgr_stop</background>
+    <background>background\bgr_trainroad</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_save.gml</script>
-    <script>scripts\scr_load.gml</script>
+    <scripts name="save/load system">
+      <script>scripts\scr_load.gml</script>
+      <script>scripts\scr_save.gml</script>
+    </scripts>
+    <scripts name="AI">
+      <script>scripts\scr_ai_passenger.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\obj_bus</object>
@@ -45,7 +58,10 @@
       <objects name="region">
         <object>objects\reg_collision</object>
         <object>objects\reg_entrance</object>
+        <object>objects\reg_inside</object>
       </objects>
+      <object>objects\obj_seat</object>
+      <object>objects\obj_passenger_seat</object>
     </objects>
   </objects>
   <rooms name="rooms">

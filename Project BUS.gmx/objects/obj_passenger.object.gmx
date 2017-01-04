@@ -37,6 +37,7 @@ physics_mass_properties(5,0,0,phy_inertia)
  angle = point_direction(x,y,inst.x,inst.y);
  
  
+seat=0;
 </string>
           </argument>
         </arguments>
@@ -80,23 +81,9 @@ if keyboard_check(ord('D'))
  {phy_rotation+=5};
  
  
-//  A I
+scr_ai_passenger();
 
-var inst,angle,rot;
- inst = instance_nearest(x,y,reg_entrance);
- angle = round(point_direction(x,y,inst.x,inst.y));
- rot = round(phy_rotation);
- if rot != 360 - angle
-  {
-  if rot &gt; 360 - angle
-   {phy_rotation -=1};
-  else 
-   {phy_rotation +=1};
-  };
- else
-  {
-  {physics_apply_local_impulse(0,0,15,0)};
-  };
+ 
  
 /*
  var x1, y1, x2, y2; 
@@ -180,6 +167,7 @@ if phy_speed_x &gt; 0 || phy_speed_x &lt; 0 || phy_speed_y &gt; 0 || phy_speed_y
  {image_speed=0.25};
 else
  {image_speed=0;image_index=0};
+ 
 
 // DEBUG
 /*
