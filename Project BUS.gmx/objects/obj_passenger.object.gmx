@@ -26,6 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>
+// M A S S
+
+physics_mass_properties(5,0,0,phy_inertia)
+
+
 
  var inst,angle;
  inst = instance_nearest(x,y,reg_entrance)
@@ -59,9 +64,9 @@
 /// M O V E M E N T
 
 if keyboard_check(ord('W'))
- {physics_apply_local_impulse(0,0,0,-1)};
+ {physics_apply_local_impulse(0,0,0,-10)};
 if keyboard_check(ord('S'))
- {physics_apply_local_impulse(0,0,0,1)};
+ {physics_apply_local_impulse(0,0,0,10)};
  
 if keyboard_check(ord('A'))
  {phy_rotation-=5};
@@ -69,7 +74,7 @@ if keyboard_check(ord('D'))
  {phy_rotation+=5};
  
 //  A I
-
+/*
 var inst,angle;
  inst = instance_nearest(x,y,reg_entrance);
  angle = round(point_direction(x,y,inst.x,inst.y));
@@ -82,10 +87,10 @@ if round(phy_rotation) != round(angle)
   };
 else 
  {
- {physics_apply_local_impulse(0,0,0,-1)};
+// {physics_apply_local_impulse(0,0,0,-1)};
  };
  
-
+/*
  var x1, y1, x2, y2; 
  x1 = lengthdir_x(1, phy_rotation); 
  y1 = lengthdir_y(1, phy_rotation); 
@@ -139,6 +144,26 @@ else
             <string>
 
 draw_self();
+
+
+if phy_speed_x &gt; 0 || phy_speed_x &lt; 0 || phy_speed_y &gt; 0 || phy_speed_y &lt; 0
+ {image_speed=0.25};
+else
+ {image_speed=0;image_index=0};
+
+// DEBUG
+/*
+if keyboard_check(vk_left)
+ {physics_mass_properties(phy_mass-0.1,0,0,phy_inertia)};
+if keyboard_check(vk_right)
+ {physics_mass_properties(phy_mass+0.1,0,0,phy_inertia)};
+
+draw_text(12,12,string('PHY_MASS = ')+string(phy_mass));
+draw_text(12,24,string('PHY_SPEED_X = ')+string(phy_speed_x));
+draw_text(12,36,string('PHY_SPEED_Y = ')+string(phy_speed_y));
+*/
+
+
 
 draw_text(12,12,string('POINT_DIRECTION (ANGLE) = ')+string(round(point_direction(x,y,instance_nearest(x,y,reg_entrance).x,instance_nearest(x,y,reg_entrance).y))));
 draw_text(12,24,string('PHY_ROTATION = ')+string(round(phy_rotation)));
