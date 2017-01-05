@@ -44,6 +44,8 @@
     </scripts>
     <scripts name="AI">
       <script>scripts\scr_ai_passenger.gml</script>
+      <script>scripts\scr_ai_passenger_entrance.gml</script>
+      <script>scripts\scr_ai_targeting.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">

@@ -26,18 +26,41 @@
           <argument>
             <kind>1</kind>
             <string>
+// STAGING
+stage = 0;
+
 // M A S S
 
-physics_mass_properties(5,0,0,phy_inertia)
+physics_mass_properties(5,0,0,phy_inertia);
 
-
-
- var inst,angle;
- inst = instance_nearest(x,y,reg_entrance)
- angle = point_direction(x,y,inst.x,inst.y);
- 
- 
+// S I T T I N G 
 seat=0;
+
+// Angular speed
+a_speed = 5;
+clamp(a_speed,0,5);
+
+// ANGLE
+//phy_rotation = irandom_range(120,250);
+
+// FORCE
+force = irandom_range(1,5);
+
+
+// D E B U G
+ 
+// var inst,angle,rot,point_x,point_y;
+ inst = instance_nearest(x,y,reg_entrance);
+ point_x = irandom_range(inst.x,(inst.x+sprite_width));
+ point_y = irandom_range(inst.y,(inst.y+sprite_height));
+ angle = round(point_direction(x,y,point_x,point_y));
+ rot = round(phy_rotation);
+ 
+// +++
+ inst2 = instance_nearest(x,y,reg_inside);
+ point_x2 = irandom_range(inst2.x,(inst2.x+sprite_width));
+ point_y2 = irandom_range(inst2.y,(inst2.y+sprite_height));
+ angle2 = round(point_direction(x,y,point_x2,point_y2));
 </string>
           </argument>
         </arguments>
@@ -62,9 +85,9 @@ seat=0;
             <kind>1</kind>
             <string>
 if phy_rotation&lt;0
- {phy_rotation=360};
+ {phy_rotation=360-abs(phy_rotation)};
 if phy_rotation&gt;360
- {phy_rotation=0};
+ {phy_rotation=0+(phy_rotation-360)};
  
 
 
@@ -79,10 +102,16 @@ if keyboard_check(ord('A'))
  {phy_rotation-=5};
 if keyboard_check(ord('D'))
  {phy_rotation+=5};
- 
- 
-scr_ai_passenger();
 
+// ROTATING
+
+ 
+//SCRIPTING
+ 
+//scr_ai_passenger();
+scr_ai_passenger_entrance();
+
+rot = round(phy_rotation);
  
  
 /*
@@ -163,13 +192,121 @@ scr_ai_passenger();
 
 
 draw_self();
+
+// A N I M A T I O N
+
 if phy_speed_x &gt; 0 || phy_speed_x &lt; 0 || phy_speed_y &gt; 0 || phy_speed_y &lt; 0
  {image_speed=0.25};
 else
  {image_speed=0;image_index=0};
  
+draw_text(12,12,string('POINT_DIRECTION (ANGLE) = ')+string(round(point_direction(x,y,instance_nearest(x,y,reg_entrance).x,instance_nearest(x,y,reg_entrance).y))));
+draw_text(12,24,string('PHY_ROTATION = ')+string(abs(round(phy_rotation))));
+// OLD
+draw_text(12,36,string('ROT SUMMARY = ')+string((rot+180)-360));
+draw_text(12,48,string('FORMULA = ')+string(rot-(360-angle)));
+draw_text(12,60,string('ROT = ')+string(rot));
+// NEW
+draw_text(12,72,string('NEW_ROT SUMMARY = ')+string((phy_rotation+180)-360));
+draw_text(12,84,string('NEW_FORMULA = ')+string(phy_rotation-(360-angle)));
+draw_text(12,96,string('NEW_ROT = ')+string(phy_rotation));
 
+//draw_text(12,108,string(rot180));
+
+draw_text(x,y,string(stage));
 // DEBUG
+
+ draw_line(point_x-15,point_y,point_x+15,point_y);
+ draw_line(point_x,point_y-15,point_x,point_y+15);
+ draw_line(x,y,point_x,point_y);
+
+/*
+
+//  A I
+
+// ENTRANCE
+ inst = instance_nearest(x,y,reg_entrance);
+// point_x = irandom_range(inst.x,(inst.x+sprite_width));s
+// point_y = irandom_range(inst.y,(inst.y+sprite_height));
+ angle = round(point_direction(x,y,point_x,point_y));
+ rot = round(phy_rotation);
+
+// CREST 
+ draw_line(point_x-15,point_y,point_x+15,point_y);
+ draw_line(point_x,point_y-15,point_x,point_y+15);
+//
+
+if !position_meeting(x, y, reg_entrance) &amp;&amp; x&gt;200
+ {
+ if rot != 360 - angle
+  {
+  if angle &lt; 180
+   {phy_rotation -=1};
+  else 
+   {phy_rotation +=1};
+  };
+ else
+  {
+  {physics_apply_local_impulse(0,0,15,0)};
+  };
+ };
+ 
+
+// INSIDE BUS
+
+else
+ {
+ inst = instance_nearest(x,y,reg_inside);
+// point_x = irandom_range(inst.x,(inst.x+sprite_width));s
+// point_y = irandom_range(inst.y,(inst.y+sprite_height));
+ angle = round(point_direction(x,y,point_x2,point_y2));
+ rot = round(phy_rotation);
+ if !position_meeting(x, y, reg_inside) &amp;&amp; x&gt;144
+ {
+ if rot != 360 - angle
+  {
+  if rot &gt; 360 - angle
+   {phy_rotation -=1};
+  else 
+   {phy_rotation +=1};
+  };
+ else
+  {
+  {physics_apply_local_impulse(0,0,15,0)};
+  };
+ };
+ else
+  {
+  var seat,angle,rot;
+  seat = instance_nearest(x,y,obj_seat);
+  angle = round(point_direction(x,y,seat.x,seat.y));
+  rot = round(phy_rotation);
+  if !position_meeting(x,y,obj_seat)
+   {
+   if rot != 360 - angle
+     {
+   if rot &gt; 360 - angle
+     {phy_rotation -=1};
+  else 
+     {phy_rotation +=1};
+     };
+   };
+  else
+   {
+    {physics_apply_local_impulse(0,0,15,0)};
+   };
+  };
+ 
+ 
+ // CREST 
+ draw_line(point_x2-15,point_y2,point_x2+15,point_y2);
+ draw_line(point_x2,point_y2-15,point_x2,point_y2+15);
+ //
+
+
+ };
+
+
 /*
 if keyboard_check(vk_left)
  {physics_mass_properties(phy_mass-0.1,0,0,phy_inertia)};
@@ -179,11 +316,10 @@ if keyboard_check(vk_right)
 draw_text(12,12,string('PHY_MASS = ')+string(phy_mass));
 draw_text(12,24,string('PHY_SPEED_X = ')+string(phy_speed_x));
 draw_text(12,36,string('PHY_SPEED_Y = ')+string(phy_speed_y));
-*/
+/
 
 
-draw_text(12,12,string('POINT_DIRECTION (ANGLE) = ')+string(round(point_direction(x,y,instance_nearest(x,y,reg_entrance).x,instance_nearest(x,y,reg_entrance).y))));
-draw_text(12,24,string('PHY_ROTATION = ')+string(abs(round(phy_rotation))));
+
 </string>
           </argument>
         </arguments>
