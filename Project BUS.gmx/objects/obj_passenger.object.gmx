@@ -26,11 +26,13 @@
           <argument>
             <kind>1</kind>
             <string>
+// LOVE SEAT
+love_seat=irandom_range(1,global.seats);
+
 // STAGING
 stage = 0;
 
 // M A S S
-
 physics_mass_properties(5,0,0,phy_inertia);
 
 // S I T T I N G 
@@ -60,7 +62,6 @@ force = irandom_range(1,5);
  inst2 = instance_nearest(x,y,reg_inside);
  point_x2 = irandom_range(inst2.x,(inst2.x+sprite_width));
  point_y2 = irandom_range(inst2.y,(inst2.y+sprite_height));
- angle2 = round(point_direction(x,y,point_x2,point_y2));
 </string>
           </argument>
         </arguments>
@@ -211,14 +212,20 @@ draw_text(12,72,string('NEW_ROT SUMMARY = ')+string((phy_rotation+180)-360));
 draw_text(12,84,string('NEW_FORMULA = ')+string(phy_rotation-(360-angle)));
 draw_text(12,96,string('NEW_ROT = ')+string(phy_rotation));
 
+draw_text(12,108,string('POINT_DISTANCE1 = ')+string(point_distance(x,y,point_x,point_y)));
+draw_text(12,120,string('POINT_DISTANCE2 = ')+string(point_distance(x,y,point_x2,point_y2)));
 //draw_text(12,108,string(rot180));
 
 draw_text(x,y,string(stage));
 // DEBUG
-
- draw_line(point_x-15,point_y,point_x+15,point_y);
+if stage = 1
+{draw_line(point_x-15,point_y,point_x+15,point_y);
  draw_line(point_x,point_y-15,point_x,point_y+15);
- draw_line(x,y,point_x,point_y);
+ draw_line(x,y,point_x,point_y);};
+if stage = 2
+ {draw_line(point_x2-15,point_y2,point_x2+15,point_y2);
+ draw_line(point_x2,point_y2-15,point_x2,point_y2+15);
+ draw_line(x,y,point_x2,point_y2);};
 
 /*
 

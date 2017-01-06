@@ -6,10 +6,9 @@
    var ang_rot,rot180;
    ang_rot = 360 - angle;
    rot180 = rot + 180;
-/*
    if rot180 > 360
     {rot180 = rot180 - 360};
-*/
+
     if rot != ang_rot
      {
      if rot180 != ang_rot
@@ -20,8 +19,10 @@
         if ang_rot<355
          {
           if abs(rot - ang_rot) > 5
-           {phy_rotation -= 5}
-          else 
+
+          
+                    
+                               else 
            {phy_rotation -= 1};
          }
         else
@@ -57,8 +58,7 @@
          else
          {phy_rotation -=1};};
        else
-        {
-        if ang_rot - rot > 5
+        {if ang_rot - rot > 5
          {phy_rotation +=5};
          else
          {phy_rotation +=1};};

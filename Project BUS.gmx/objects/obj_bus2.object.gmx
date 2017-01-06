@@ -26,12 +26,32 @@
           <argument>
             <kind>1</kind>
             <string>
-
-
-repeat(5)
- {
-  instance_create(irandom_range(240,288),irandom_range(144,360),obj_passenger);
- };
+// INITIALIZATION
+global.seats=0;
+// SEATS CREATION
+ var xx,yy,size,i;
+    xx=120;
+    yy=144;
+    size=24;
+    i=1;
+ repeat(7)
+  {instance_create(xx,yy+(size*i),obj_seat);i+=1;};
+ var x2,y2,i2;
+    x2=168;
+    y2=192;
+    i2=1;
+ repeat(3)
+  {instance_create(x2,y2+(size*i2),obj_seat);i2+=1;};
+  var x3,y3,size2,i3;
+    x3=168;
+    y3=144;
+    i3=1;
+ repeat(2)
+  {instance_create(x3,y3+(size*i3),obj_seat);i3+=6;};
+  
+// PASSENGERS CREATION
+ repeat(5)
+  {instance_create(irandom_range(240,288),irandom_range(144,360),obj_passenger);};
 </string>
           </argument>
         </arguments>

@@ -29,6 +29,8 @@
 
 
 free = 1;
+global.seats+=1;
+seat_num = global.seats;
 </string>
           </argument>
         </arguments>

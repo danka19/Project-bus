@@ -46,6 +46,11 @@
       <script>scripts\scr_ai_passenger.gml</script>
       <script>scripts\scr_ai_passenger_entrance.gml</script>
       <script>scripts\scr_ai_targeting.gml</script>
+      <script>scripts\scr_ai_targeting2.gml</script>
+      <scripts name="rotation">
+        <script>scripts\scr_ang_rot.gml</script>
+        <script>scripts\scr_ang_rot180.gml</script>
+      </scripts>
     </scripts>
   </scripts>
   <objects name="objects">
