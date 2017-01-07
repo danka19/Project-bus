@@ -108,8 +108,13 @@ if keyboard_check(ord('D'))
  
 //SCRIPTING
  
+///////////////////////////////////////////
 //scr_ai_passenger();
-scr_ai_passenger_entrance();
+//scr_ai_passenger_entrance();
+////////////////////////////////////////////
+
+scri_ai_pass(30,30,30,30);
+
 
 rot = round(phy_rotation);
  
@@ -120,7 +125,26 @@ rot = round(phy_rotation);
  y1 = lengthdir_y(1, phy_rotation); 
  x2 = obj_passenger.x - x; 
  y2 = obj_passenger.y - y; 
- if dot_product(x1, y1, x2, y2) &gt; 0 seen=true else seen=false; 
+ if dot_product(x1, y1, x2, y2) &gt; 0 seen=true else seen=false;
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
 </string>
           </argument>
         </arguments>
