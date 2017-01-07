@@ -25,7 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>// ROTATION DIRECTION
+rot_dir=0;
+
+
+
 // STAGING
 stage = 0;
 
@@ -41,7 +45,7 @@ a_speed = 5;
 clamp(a_speed,0,5);
 
 // ANGLE
-//phy_rotation = irandom_range(120,250);
+phy_rotation = irandom_range(120,250);
 
 // FORCE
 force = irandom_range(1,5);
@@ -235,6 +239,7 @@ draw_text(12,72,string('NEW_ROT SUMMARY = ')+string((phy_rotation+180)-360));
 draw_text(12,84,string('NEW_FORMULA = ')+string(phy_rotation-(360-angle)));
 draw_text(12,96,string('NEW_ROT = ')+string(phy_rotation));
 
+draw_text(12,118,string('ROT_DIRECTION=')+string(rot_dir));
 //draw_text(12,108,string(rot180));
 
 draw_text(x,y,string(stage));

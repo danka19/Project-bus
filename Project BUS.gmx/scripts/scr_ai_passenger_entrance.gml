@@ -15,10 +15,12 @@
   if stage = 1
 // 
    {
+   
    if !place_meeting(x,y,inst)
      {scr_ai_targeting()};
    else
-     {stage = 2;inst = inst2;angle = angle2;};
+     {stage = 2; inst = inst2; angle = angle2; rot_dir=0;};
+     
    };
 /*
 // STAGE 2
