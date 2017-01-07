@@ -22,7 +22,7 @@
      {stage = 2; inst = inst2; angle = angle2; rot_dir=0;};
      
    };
-/*
+
 // STAGE 2
   if stage = 2
 //
