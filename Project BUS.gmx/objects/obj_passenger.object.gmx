@@ -27,10 +27,9 @@
             <kind>1</kind>
 <<<<<<< HEAD
             <string>
-
-
 // LOVE SEAT
 love_seat=irandom_range(1,global.seats);
+<<<<<<< HEAD
 // FIND LOVE SEAT
 id_love_seat = 0;
 // 7
@@ -73,6 +72,8 @@ rot_dir=0;
 
 
 >>>>>>> origin/master
+=======
+>>>>>>> parent of 68ba785... ЕЩЁ АПДЕЙТ
 
 // STAGING
 stage = 0;
@@ -90,13 +91,8 @@ clamp(a_speed,0,5);
 // ANGLE
 phy_rotation = irandom_range(120,250);
 
-// ANGULAR FORCE
-angular_force = 5;
-angular_force_low = 1;
 // FORCE
-force_low =1;
-force = 5;
-random_force = irandom_range(1,3);
+force = irandom_range(1,5);
 
 
 // D E B U G
@@ -269,7 +265,6 @@ draw_text(12,120,string('POINT_DISTANCE2 = ')+string(point_distance(x,y,point_x2
 draw_text(12,118,string('ROT_DIRECTION=')+string(rot_dir));
 >>>>>>> origin/master
 //draw_text(12,108,string(rot180));
-draw_text(12,132,string('GLOBAL_SEATS = ')+string(global.seats));
 
 draw_text(x,y,string(stage));
 // DEBUG

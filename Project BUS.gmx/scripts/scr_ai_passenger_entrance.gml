@@ -15,7 +15,6 @@
   if stage = 1
 // 
    {
-<<<<<<< HEAD
 //
 //   if !place_meeting(x,y,inst)
 //
@@ -24,16 +23,6 @@
    else
      {inst = inst2; angle = round(point_direction(x,y,point_x2,point_y2));stage = 2;};
    };
-=======
-   
-   if !place_meeting(x,y,inst)
-     {scr_ai_targeting()};
-   else
-     {stage = 2; inst = inst2; angle = angle2; rot_dir=0;};
-     
-   };
-
->>>>>>> origin/master
 // STAGE 2
   if stage = 2
 //
