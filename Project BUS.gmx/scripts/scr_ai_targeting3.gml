@@ -75,4 +75,4 @@ if rot != ang_rot
  };
   
 else
- {{physics_apply_local_impulse(0,0,force+random_force,0)};};
+ {{physics_apply_local_impulse(0,0,force_low,0)};};
