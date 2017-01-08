@@ -32,8 +32,8 @@
 //
     if round(point_distance(x,y,point_x2,point_y2)) >= 10
      {scr_ai_targeting2()};
-    else
-   !/  {inst = love_seat; angle = round(point_direction(x,y,inst.x+((sprite_width/2)-1),inst.y+(sprite_height/2))); stage = 3;};
+//    else
+//   !/  {inst = love_seat; angle = round(point_direction(x,y,inst.x+((sprite_width/2)-1),inst.y+(sprite_height/2))); stage = 3;};
    // love_seat выдаёт число или порядковый номер сидения, а не его id
    // Скопировать или сохранить его id под переменной, чтобы потом найти его
    // И присвоить ему переменную inst
@@ -46,3 +46,4 @@
        {physics_apply_local_impulse(0,0,5+force,0)};};
        else
         {};
+     };
