@@ -32,26 +32,31 @@
 //
     if round(point_distance(x,y,point_x2,point_y2)) >= 10
      {scr_ai_targeting2()};
-<<<<<<< HEAD
-//    else
-//   !/  {inst = love_seat; angle = round(point_direction(x,y,inst.x+((sprite_width/2)-1),inst.y+(sprite_height/2))); stage = 3;};
-=======
     else
-   !/  {inst = love_seat; angle = round(point_direction(x,y,inst.x+((sprite_width/2)-1),inst.y+(sprite_height/2))); stage = 3;};
->>>>>>> parent of 68ba785... ЕЩЁ АПДЕЙТ
-   // love_seat выдаёт число или порядковый номер сидения, а не его id
-   // Скопировать или сохранить его id под переменной, чтобы потом найти его
-   // И присвоить ему переменную inst
+     {inst = id_love_seat; angle = round(point_direction(x,y,inst.x+((sprite_width/2)-1),inst.y+(sprite_height/2))); stage = 3;};
     };
 // STAGE 3
   if stage = 3
-    {
-     if point_distance(x,y,inst.x+((sprite_width/2)-1),inst.y+(sprite_height/2)) < 50
+    {if round(point_distance(x,y,inst.x+((sprite_width/2)-1),inst.y+(sprite_height/2))) < 50
       {if inst.free = 1
-       {physics_apply_local_impulse(0,0,5+force,0)};};
+       {if round(point_distance(x,y,inst.x+((sprite_width/2)-1),inst.y+(sprite_height/2))) < 10
+         {
+          if round(point_distance(x,y,inst.x+((sprite_width/2)-1),inst.y+(sprite_height/2))) < 5
+           {inst.free = 0; stage = 4;};
+          else
+           {scr_ai_targeting3()};
+         };
+        else
+         {scr_ai_targeting2()};
+       };
        else
-        {};
-<<<<<<< HEAD
-     };
-=======
->>>>>>> parent of 68ba785... ЕЩЁ АПДЕЙТ
+        {next_seat+=1;
+          if next_seat = love_seat
+           {return 0};
+          if next_seat > global.seats
+           {next_seat=1;};
+        };
+      };
+    else
+     {scr_ai_targeting2();};
+    };

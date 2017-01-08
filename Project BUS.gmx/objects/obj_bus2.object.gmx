@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>
 // INITIALIZATION
-global.seats=0;
+global.seats = 0;
 // SEATS CREATION
  var xx,yy,size,i;
     xx=120;
@@ -49,6 +49,9 @@ global.seats=0;
  repeat(2)
   {instance_create(x3,y3+(size*i3),obj_seat);i3+=6;};
   
+
+{instance_create(irandom_range(240,288),irandom_range(144,360),obj_passenger);};  
+
 // PASSENGERS CREATION
  repeat(5)
   {instance_create(irandom_range(240,288),irandom_range(144,360),obj_passenger);};

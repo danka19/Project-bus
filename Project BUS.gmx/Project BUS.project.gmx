@@ -36,7 +36,9 @@
     <background>background\bgr_stop</background>
     <background>background\bgr_trainroad</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path0</path>
+  </paths>
   <scripts name="scripts">
     <scripts name="save/load system">
       <script>scripts\scr_load.gml</script>
@@ -45,11 +47,14 @@
     <scripts name="AI">
       <script>scripts\scr_ai_passenger.gml</script>
       <script>scripts\scr_ai_passenger_entrance.gml</script>
-      <script>scripts\scr_ai_targeting.gml</script>
-      <script>scripts\scr_ai_targeting2.gml</script>
       <scripts name="rotation">
         <script>scripts\scr_ang_rot.gml</script>
         <script>scripts\scr_ang_rot180.gml</script>
+      </scripts>
+      <scripts name="targeting">
+        <script>scripts\scr_ai_targeting.gml</script>
+        <script>scripts\scr_ai_targeting2.gml</script>
+        <script>scripts\scr_ai_targeting3.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -61,10 +66,19 @@
     </objects>
     <objects name="gameplay">
       <object>objects\obj_bus2</object>
+      <object>objects\obj_passenger</object>
+      <objects name="region">
+        <object>objects\reg_collision</object>
+        <object>objects\reg_entrance</object>
+        <object>objects\reg_inside</object>
+      </objects>
+      <object>objects\obj_seat</object>
+      <object>objects\obj_passenger_seat</object>
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\rm_main</room>
+    <room>rooms\rm_bus</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
