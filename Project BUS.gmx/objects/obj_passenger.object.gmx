@@ -33,6 +33,12 @@ love_seat=irandom_range(1,global.seats);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/master
 =======
 =======
 >>>>>>> origin/master
@@ -88,6 +94,15 @@ rot_dir=0;
 >>>>>>> parent of 68ba785... ЕЩЁ АПДЕЙТ
 =======
 >>>>>>> parent of 68ba785... ЕЩЁ АПДЕЙТ
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> parent of 68ba785... ЕЩЁ АПДЕЙТ
+=======
+>>>>>>> parent of 68ba785... ЕЩЁ АПДЕЙТ
+=======
+>>>>>>> parent of 68ba785... ЕЩЁ АПДЕЙТ
+>>>>>>> origin/master
 
 // STAGING
 stage = 0;
