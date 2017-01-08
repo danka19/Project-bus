@@ -25,6 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
+<<<<<<< HEAD
             <string>
 
 
@@ -66,6 +67,12 @@ id_love_seat = 0;
 
 // NEXT SEAT (TO FIND FREE SEAT IF LOVE_SEAT IS TAKEN
 next_seat = love_seat;
+=======
+            <string>// ROTATION DIRECTION
+rot_dir=0;
+
+
+>>>>>>> origin/master
 
 // STAGING
 stage = 0;
@@ -81,7 +88,7 @@ a_speed = 5;
 clamp(a_speed,0,5);
 
 // ANGLE
-//phy_rotation = irandom_range(120,250);
+phy_rotation = irandom_range(120,250);
 
 // ANGULAR FORCE
 angular_force = 5;
@@ -255,8 +262,12 @@ draw_text(12,72,string('NEW_ROT SUMMARY = ')+string((phy_rotation+180)-360));
 draw_text(12,84,string('NEW_FORMULA = ')+string(phy_rotation-(360-angle)));
 draw_text(12,96,string('NEW_ROT = ')+string(phy_rotation));
 
+<<<<<<< HEAD
 draw_text(12,108,string('POINT_DISTANCE1 = ')+string(point_distance(x,y,point_x,point_y)));
 draw_text(12,120,string('POINT_DISTANCE2 = ')+string(point_distance(x,y,point_x2,point_y2)));
+=======
+draw_text(12,118,string('ROT_DIRECTION=')+string(rot_dir));
+>>>>>>> origin/master
 //draw_text(12,108,string(rot180));
 draw_text(12,132,string('GLOBAL_SEATS = ')+string(global.seats));
 
