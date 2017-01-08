@@ -61,20 +61,8 @@
     </objects>
     <objects name="gameplay">
       <object>objects\obj_bus2</object>
-      <object>objects\obj_passenger</object>
-      <objects name="region">
-        <object>objects\reg_collision</object>
-        <object>objects\reg_entrance</object>
-        <object>objects\reg_inside</object>
-      </objects>
-      <object>objects\obj_seat</object>
-      <object>objects\obj_passenger_seat</object>
     </objects>
   </objects>
-  <rooms name="rooms">
-    <room>rooms\rm_main</room>
-    <room>rooms\rm_bus</room>
-  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
