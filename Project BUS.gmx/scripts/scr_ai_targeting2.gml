@@ -17,27 +17,27 @@ if rot != ang_rot
     {
      if ang_rot < rot
       {if abs(rot - ang_rot) > 5
-         {phy_rotation -=angular_force};
+         {phy_rotation -=5};
          else
-         {phy_rotation -=angular_force_low};};
+         {phy_rotation -=1};};
      else
       {if ang_rot - rot > 5
-         {phy_rotation +=angular_force};
+         {phy_rotation +=5};
          else
-         {phy_rotation +=angular_force_low};};
+         {phy_rotation +=1};};
     };
    if rot180 < 180
     {
      if ang_rot < rot180
       {if ang_rot - rot > 5
-         {phy_rotation +=angular_force};
+         {phy_rotation +=5};
          else
-         {phy_rotation +=angular_force_low};};
+         {phy_rotation +=1};};
      else
       {if abs(rot - ang_rot) > 5
-         {phy_rotation -=angular_force};
+         {phy_rotation -=5};
          else
-         {phy_rotation -=angular_force_low};};
+         {phy_rotation -=1};};
     };
   }
  else
@@ -46,33 +46,33 @@ if rot != ang_rot
     {
      if ang_rot < rot
       {if abs(rot - ang_rot) > 5
-         {phy_rotation -=angular_force};
+         {phy_rotation -=5};
          else
-         {phy_rotation -=angular_force_low};};
+         {phy_rotation -=1};};
      else
       {if ang_rot - rot > 5
-         {phy_rotation +=angular_force};
+         {phy_rotation +=5};
          else
-         {phy_rotation +=angular_force_low};};
+         {phy_rotation +=1};};
     };
    if rot180 >= 180
     {
      if ang_rot < rot180
       {if ang_rot - rot > 5
-         {phy_rotation +=angular_force};
+         {phy_rotation +=5};
          else
-         {phy_rotation +=angular_force_low};};
+         {phy_rotation +=1};};
      else
       {if abs(rot - ang_rot) > 5
-         {phy_rotation -=angular_force};
+         {phy_rotation -=5};
          else
-         {phy_rotation -=angular_force_low};};
+         {phy_rotation -=1};};
     };
   };
- };
+  };
  else
   {{phy_rotation+=(choose(-1,1));};};
  };
   
 else
- {{physics_apply_local_impulse(0,0,force+random_force,0)};};
+ {{physics_apply_local_impulse(0,0,5+force,0)};};
