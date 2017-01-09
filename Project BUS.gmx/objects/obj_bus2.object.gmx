@@ -52,6 +52,7 @@ global.seats = 0;
 
 {instance_create(irandom_range(240,288),irandom_range(144,360),obj_passenger);};  
 
+/*
 // PASSENGERS CREATION
  repeat(5)
   {instance_create(irandom_range(240,288),irandom_range(144,360),obj_passenger);};

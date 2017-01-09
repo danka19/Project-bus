@@ -56,6 +56,7 @@
         <script>scripts\scr_ai_targeting2.gml</script>
         <script>scripts\scr_ai_targeting3.gml</script>
       </scripts>
+      <script>scripts\scr_ai_colliding.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">

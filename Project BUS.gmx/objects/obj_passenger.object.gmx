@@ -154,6 +154,7 @@ if keyboard_check(ord('D'))
  
 //scr_ai_passenger();
 scr_ai_passenger_entrance();
+scr_ai_colliding();
 
 rot = round(phy_rotation);
  
