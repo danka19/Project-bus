@@ -25,9 +25,27 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>//MOTION
+global.motion=0;
+
+//STATIONS
+global.station=1;
+global.sum_station=2;
+
+//
+if global.station &gt;2
+{global.station=1};
+
+
+// ALARM
+sec_in_path=5;
+sec_at_stop=5;
+
+
 // INITIALIZATION
 global.seats = 0;
+
+
 // SEATS CREATION
  var xx,yy,size,i;
     xx=120;
@@ -56,6 +74,73 @@ global.seats = 0;
 // PASSENGERS CREATION
  repeat(5)
   {instance_create(irandom_range(240,288),irandom_range(144,360),obj_passenger);};
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+alarm[1]=room_speed*sec_at_stop;
+
+{
+background_vspeed[0]=0;
+background_vspeed[1]=0;
+background_vspeed[2]=0;
+global.motion=0;
+
+};
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+alarm[0]=room_speed*sec_in_path;
+
+{
+
+background_vspeed[0]=1;
+background_vspeed[1]=1;
+background_vspeed[2]=1;
+global.motion=1;
+global.station++;
+
+};
+
 </string>
           </argument>
         </arguments>

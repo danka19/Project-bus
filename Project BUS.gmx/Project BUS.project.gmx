@@ -20,6 +20,7 @@
       <sprite>sprites\spr_entrance</sprite>
       <sprite>sprites\spr_bus_inside</sprite>
       <sprite>sprites\spr_collision_l</sprite>
+      <sprite>sprites\spr_station</sprite>
     </sprites>
     <sprites name="SEATS">
       <sprite>sprites\spr_SEAT_24x24</sprite>
@@ -72,6 +73,7 @@
         <object>objects\reg_collision</object>
         <object>objects\reg_entrance</object>
         <object>objects\reg_inside</object>
+        <object>objects\reg_station</object>
       </objects>
       <object>objects\obj_seat</object>
       <object>objects\obj_passenger_seat</object>
