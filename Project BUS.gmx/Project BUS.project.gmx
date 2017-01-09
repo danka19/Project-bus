@@ -15,6 +15,7 @@
       <sprite>sprites\spr_bus2</sprite>
       <sprite>sprites\spr_passenger</sprite>
       <sprite>sprites\spr_passenger_seat</sprite>
+      <sprite>sprites\spr_bus_anim</sprite>
     </sprites>
     <sprites name="regions">
       <sprite>sprites\spr_entrance</sprite>
@@ -57,6 +58,7 @@
         <script>scripts\scr_ai_targeting3.gml</script>
       </scripts>
       <script>scripts\scr_ai_colliding.gml</script>
+      <script>scripts\scr_ai_routing.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">

@@ -1,0 +1,11 @@
+
+
+var col_inst, col_angle, col_ang_rot, col_rot90;
+
+col_inst = instance_nearest(x,y,obj_passenger);;
+col_angle = point_direction(x,y,col_intst.x,col_inst.y);
+col_ang_rot = 360 - angle;
+col_rot180 = rot + 180;
+
+ if rot180 > 360
+ {rot180 = rot180 - 360};
