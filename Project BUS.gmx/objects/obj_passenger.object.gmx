@@ -45,7 +45,7 @@ id_love_seat = 0;
     //SRATS CREATION
 
 
-// 7 (создание семи сидушек слева)
+// 7 (Проверка сидушек (поиск love seat)
 var inst,xx,yy,size,i;
 inst=0;
     xx=120;
@@ -128,8 +128,8 @@ random_force = irandom_range(1,3);
  
 // var inst,angle,rot,point_x,point_y; || YELLOW INST
  inst1 = instance_nearest(x,y,reg_entrance);
- point_x = irandom_range(inst.x,(inst.x+sprite_width));
- point_y = irandom_range(inst.y,(inst.y+sprite_height));
+ point_x = irandom_range(inst1.x,(inst1.x+sprite_width));
+ point_y = irandom_range(inst1.y,(inst1.y+sprite_height));
  angle = round(point_direction(x,y,point_x,point_y));
  rot = round(phy_rotation); 
  
@@ -142,19 +142,18 @@ random_force = irandom_range(1,3);
  
 
  
- 
-// COLLISION
-l_pointx = x+lengthdir_x(15,image_angle);
-l_pointy = y+lengthdir_y(15,image_angle);
 
  //GREEN INST
-  inst3 = instance_nearest(x,y,reg_inside);
+  inst3 = instance_nearest(x,y,reg_station);
  point_x3 = irandom_range(inst3.x,(inst3.x+sprite_width));
  point_y3 = irandom_range(inst3.y,(inst3.y+sprite_height));
  
  
  
 
+// COLLISION
+l_pointx = x+lengthdir_x(15,image_angle);
+l_pointy = y+lengthdir_y(15,image_angle);
 </string>
           </argument>
         </arguments>

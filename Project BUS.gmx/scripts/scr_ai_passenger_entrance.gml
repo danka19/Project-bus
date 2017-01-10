@@ -67,7 +67,7 @@
             inst.free = 0;  
             inst = inst2;
             angle = round(point_direction(x,y,point_x2,point_y2)); 
-            stage = 4;
+            stage = 4.1;
            };
               
           else
@@ -93,45 +93,35 @@
        
 //STAGE 4.1
 
-    if (stage = 4) && (stop = station)
-    // И ГДЕ ТЫ БЕРЁШЬ СТЭЙШОН?
-    // ОН ДОЛЖЕН БЫТЬ ОБЪЯВЛЕН, МАТЬ ЕГО
-    // ЛИБО ПРИСВОЕН ДО ТОГО, КАК ИСПОЛЬЗОВАН
-    // |
-    // |
-    // |
-    // V
+    if (stage = 4.1) && (global.stop = global.station)
      {
       if round(point_distance(x,y,point_x2,point_y2)) >= 10
       {scr_ai_targeting2()};
-     };   
+      
     else
      {
       inst = inst1;
       angle = round(point_direction(x,y,point_x,point_y)); 
       stage=4.2;
      };
-  
+     }; 
       
 //STAGE 4.2
 
     if stage=4.2 
     {
       if global.motion=0 
-      // А МОУШЕН ГДЕ?
-      // А А А???
-      {
+      
         if round(point_distance(x,y,point_x,point_y)) >= 10
         {scr_ai_targeting2()};
-      };
-     };
+    
         else 
       {
       inst = inst3;
       angle = round(point_direction(x,y,point_x3,point_y3)); 
       stage=4.3;
       }; 
-        
+    };  
       
 //STAGE 4.3
     
@@ -139,12 +129,10 @@
     {
      if round(point_distance(x,y,point_x3,point_y3)) >= 10
      {scr_ai_targeting2()};
-    };
+ 
      else
-     {
-     stage=5;
-     };
-     
+     {stage=5;};
+    };    
 
 
 
