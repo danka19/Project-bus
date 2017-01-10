@@ -17,7 +17,7 @@
    if i = 5
    {str='Point_y3= '+string(point_y3)};
    if i = 6
-   {str='Phy_position_x= '+string(phy_position_x)};
+   {str='Collision Line= '+string(collision_line(x,y,l_pointx,l_pointy,reg_collision,true,true))};
    if i = 7
    {str='Phy_position_y= '+string(phy_position_y)};
    if i = 8
