@@ -61,6 +61,7 @@ randomize();</code>
     <instance objName="reg_station" x="288" y="165" name="inst_A05CA2CB" locked="0" code="" scaleX="-11.5" scaleY="41.5" colour="4294967295" rotation="0"/>
     <instance objName="reg_entrance" x="192" y="168" name="inst_2BCB87FF" locked="0" code="" scaleX="8" scaleY="8" colour="4294967295" rotation="0"/>
     <instance objName="reg_entrance" x="192" y="264" name="inst_C64BF844" locked="0" code="" scaleX="8" scaleY="8" colour="4294967295" rotation="0"/>
+    <instance objName="obj_passenger_seat" x="24" y="504" name="inst_D2B953ED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="reg_collision" x="189" y="288" name="inst_1234C66E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="reg_collision" x="129" y="333" name="inst_2CA57F2C" locked="0" code="" scaleX="18" scaleY="0.125" colour="4294967295" rotation="0"/>
     <instance objName="reg_collision" x="189" y="312" name="inst_C58B285E" locked="0" code="" scaleX="1" scaleY="1.04166662693024" colour="4294967295" rotation="-16"/>

@@ -125,7 +125,6 @@
     };  
       
 //STAGE 4.3
-//TI SEJCHAS PO LU CHISSHHHHHHSHSHSHSHSSSSSSSSSSSSSSHHHHHHHH
     
     if stage=4.3
     {

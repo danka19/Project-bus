@@ -25,21 +25,25 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//MOTION
-global.motion=0;
+            <string>
+//MOTION
+ global.motion=0;
+
 
 //STATIONS
-global.station=1;
-global.sum_station=2;
+ global.station=1;
+ global.sum_station=3;
 
 
 // ALARM
-sec_in_path=5;
-sec_at_stop=5;
+
+
+sec_in_path=10;
+sec_at_stop=10;
 
 
 // INITIALIZATION
-global.seats = 0;
+ global.seats = 0;
 
 
 // SEATS CREATION
@@ -66,10 +70,13 @@ global.seats = 0;
 
 {instance_create(irandom_range(240,288),irandom_range(144,360),obj_passenger);};  
 
-/*
+
 // PASSENGERS CREATION
- repeat(5)
-  {instance_create(irandom_range(240,288),irandom_range(144,360),obj_passenger);};
+
+    // repeat(5)
+    //{instance_create(irandom_range(240,288),irandom_range(144,360),obj_passenger);};
+  
+// global.sum_pass=0;
 </string>
           </argument>
         </arguments>
@@ -130,7 +137,13 @@ background_vspeed[2]=1;
 global.motion=1;
 global.station++;
 
+instance_create(irandom_range(240,288),irandom_range(144,360),obj_passenger);
+//pas_id=id.sum_pas;
+//pas_id.stage=1; 
+
 alarm[1]=room_speed*sec_in_path;
+
+
 
 </string>
           </argument>
@@ -226,7 +239,7 @@ draw_text(170,36,string('station = ')+string(global.station));
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="38">
+    <event eventtype="9" enumb="32">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -243,7 +256,7 @@ draw_text(170,36,string('station = ')+string(global.station));
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0]=1;
+            <string>alarm[1]=1;
 </string>
           </argument>
         </arguments>

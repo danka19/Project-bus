@@ -26,10 +26,15 @@
           <argument>
             <kind>1</kind>
             <string>
+
+//passenger numbrr
+//global.pas_num=global.sum_pas;
+//global.sum_pas++;
+
+
+
 //STATIONS
-global.stop= irandom_range(global.station,global.sum_station);
-
-
+global.stop= irandom_range(global.station+1,global.sum_station);
 
 
 
