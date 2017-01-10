@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>
 //STATIONS
-global.stop=1// = irandom_range(global.station,global.sum_station);
+global.stop= irandom_range(global.station,global.sum_station);
 
 
 

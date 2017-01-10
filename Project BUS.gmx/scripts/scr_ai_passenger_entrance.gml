@@ -17,12 +17,15 @@
   {stage = 1};
   
 
-  if stage = 1
+  if stage = 1 
+  
 // 
    {
+   
+   
 //
 //   if !place_meeting(x,y,inst)
-//
+   if global.motion = 0
    if round(point_distance(x,y,point_x,point_y)) >= 10
      {scr_ai_targeting2()};
      
@@ -122,6 +125,7 @@
     };  
       
 //STAGE 4.3
+//TI SEJCHAS PO LU CHISSHHHHHHSHSHSHSHSSSSSSSSSSSSSSHHHHHHHH
     
     if stage=4.3
     {
