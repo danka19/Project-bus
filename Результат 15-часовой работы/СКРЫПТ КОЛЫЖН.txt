@@ -9,3 +9,17 @@ col_rot180 = rot + 180;
 
  if rot180 > 360
  {rot180 = rot180 - 360};
+
+// ACTION
+
+if ang_rot > 45 and ang_rot < 135
+ {y-=~};
+if ang_rot > 135 and ang_rot < 225
+ {x-=~};
+if ang_rot > 225 and ang_rot <315
+ {y+=~};
+else
+ {x+=~};
+
+
+

@@ -56,6 +56,10 @@ randomize();</code>
     <instance objName="&lt;undefined&gt;" x="0" y="0" name="inst_3CEDDF42" locked="0" code="" scaleX="0" scaleY="0" colour="0" rotation="0"/>
     <instance objName="&lt;undefined&gt;" x="0" y="0" name="inst_EF4425E7" locked="0" code="" scaleX="0" scaleY="0" colour="0" rotation="0"/>
     <instance objName="obj_bus2" x="120" y="120" name="inst_B6197365" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="reg_inside" x="144" y="168" name="inst_2EE93926" locked="0" code="" scaleX="8" scaleY="8" colour="4294967295" rotation="0"/>
+    <instance objName="reg_inside" x="144" y="264" name="inst_FE184ADE" locked="0" code="" scaleX="8" scaleY="8" colour="4294967295" rotation="0"/>
+    <instance objName="reg_entrance" x="192" y="264" name="inst_1DAF4FFB" locked="0" code="" scaleX="8" scaleY="8" colour="4294967295" rotation="0"/>
+    <instance objName="reg_entrance" x="192" y="168" name="inst_4E8ED8D0" locked="0" code="" scaleX="8" scaleY="8" colour="4294967295" rotation="0"/>
     <instance objName="reg_collision" x="120" y="144" name="inst_70A4A88A" locked="0" code="" scaleX="1" scaleY="7" colour="4294967295" rotation="0"/>
     <instance objName="reg_collision" x="189" y="192" name="inst_AA8D02AE" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="reg_collision" x="189" y="144" name="inst_ED0FC5B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
