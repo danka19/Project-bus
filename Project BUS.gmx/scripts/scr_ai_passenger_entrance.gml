@@ -94,6 +94,13 @@
 //STAGE 4.1
 
     if (stage = 4) && (stop = station)
+    // И ГДЕ ТЫ БЕРЁШЬ СТЭЙШОН?
+    // ОН ДОЛЖЕН БЫТЬ ОБЪЯВЛЕН, МАТЬ ЕГО
+    // ЛИБО ПРИСВОЕН ДО ТОГО, КАК ИСПОЛЬЗОВАН
+    // |
+    // |
+    // |
+    // V
      {
       if round(point_distance(x,y,point_x2,point_y2)) >= 10
       {scr_ai_targeting2()};
@@ -111,6 +118,8 @@
     if stage=4.2 
     {
       if global.motion=0 
+      // А МОУШЕН ГДЕ?
+      // А А А???
       {
         if round(point_distance(x,y,point_x,point_y)) >= 10
         {scr_ai_targeting2()};
