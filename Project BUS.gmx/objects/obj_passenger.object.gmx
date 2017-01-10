@@ -28,10 +28,10 @@
             <string>
 
 //passenger numbrr
-//global.pas_num=global.sum_pas;
-//global.sum_pas++;
 
-
+//global.pass_id=id;
+global.sum_pass++;
+global.pass_num=global.sum_pass;
 
 //STATIONS
 global.stop= irandom_range(global.station+1,global.sum_station);

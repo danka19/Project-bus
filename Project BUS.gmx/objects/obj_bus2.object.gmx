@@ -25,7 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>// PASSENGERS CREATION
+
+    // repeat(5)
+    //{instance_create(irandom_range(240,288),irandom_range(144,360),obj_passenger);};
+   
+  global.sum_pass=0;
+  pass_id=0;
+  
+  
 //MOTION
  global.motion=0;
 
@@ -71,12 +79,7 @@ sec_at_stop=10;
 {instance_create(irandom_range(240,288),irandom_range(144,360),obj_passenger);};  
 
 
-// PASSENGERS CREATION
 
-    // repeat(5)
-    //{instance_create(irandom_range(240,288),irandom_range(144,360),obj_passenger);};
-  
-// global.sum_pass=0;
 </string>
           </argument>
         </arguments>
@@ -137,7 +140,18 @@ background_vspeed[2]=1;
 global.motion=1;
 global.station++;
 
+//создание поссажира и получение его айди
 instance_create(irandom_range(240,288),irandom_range(144,360),obj_passenger);
+
+//pass_id=instance_find(obj_passenger,global.sum_pass);
+pass_id=instance_id[global.sum_pass];
+
+//попытка переключить стейдж
+
+ pass_id.stage=1;
+
+
+//global.pas_id.stage=1;
 //pas_id=id.sum_pas;
 //pas_id.stage=1; 
 
@@ -168,7 +182,7 @@ alarm[1]=room_speed*sec_in_path;
           <argument>
             <kind>1</kind>
             <string>// station++
-if global.station &gt;2
+if global.station &gt; global.sum_station
 {global.station=1};
 
 </string>
@@ -234,6 +248,8 @@ image_speed = 0;
 draw_text(170,12,string('alarm0 = ')+string(alarm[0]));
 draw_text(170,24,string('alarm1 = ')+string(alarm[1]));
 draw_text(170,36,string('station = ')+string(global.station));
+draw_text(170,48,string('sum_pass= ')+string(global.sum_pass));
+draw_text(170,60,string('pass_id= ')+string(pass_id));
 </string>
           </argument>
         </arguments>
