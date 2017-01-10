@@ -33,28 +33,26 @@ global.stop=1// = irandom_range(global.station,global.sum_station);
 
 
 
-            //SEATS
+    //SEATS
 
 // LOVE SEAT
 love_seat=irandom_range(1,global.seats);
 
+
 // FIND LOVE SEAT
 id_love_seat = 0;
 
+    //SEATS CREATION
 
-    //SRATS CREATION
 
-
-// 7 (Проверка сидушек (поиск love seat)
+// 7 (Проверка сидушек (поиск love seat))
 var inst,xx,yy,size,i;
-inst=0;
+    inst=0;
     xx=120;
-    yy=144;
+    yy=120;
     size=24;
     i=1;
       repeat(7)
-    // Возможна ошибка в коллизии/условии
-    // Тогда хх и уу нужно поменять на хх+((sprite_width/2)-1),yy+((sprite_height/2)
     {inst = instance_position(xx+((sprite_width/2)-1),(yy+(sprite_height/2))+(size*i),obj_seat)
     if inst.seat_num = love_seat
     {id_love_seat = inst};i+=1;};
@@ -63,7 +61,7 @@ inst=0;
 // 3
     var x2,y2,i2;
     x2=168;
-    y2=192;
+    y2=168;
     i2=1;
     repeat(3)
     {inst = instance_position(x2+((sprite_width/2)-1),(y2+(sprite_height/2))+(size*i2),obj_seat)
@@ -74,29 +72,30 @@ inst=0;
 // 2
   var x3,y3,size2,i3;
     x3=168;
-    y3=144;
+    y3=120;
     i3=1;
  repeat(2)
   {inst = instance_position(x3+((sprite_width/2)-1),(y3+(sprite_height/2))+(size*i3),obj_seat)
    if inst.seat_num = love_seat
     {id_love_seat = inst};i3+=6;};
     
+    
+    
+    
 
 // NEXT SEAT (TO FIND FREE SEAT IF LOVE_SEAT IS TAKEN
 next_seat = love_seat;
-
 
 
 // STAGING
 stage = 0;
 
 
-
 // S I T T I N G 
 seat=0;
 
 
-        // PHYSICS
+// PHYSICS
         
         
 // M A S S
@@ -110,6 +109,7 @@ clamp(a_speed,0,5);
 
 // ANGLE
 //phy_rotation = irandom_range(120,250);
+
 
 // ANGULAR FORCE
 angular_force = 5;
@@ -126,7 +126,7 @@ random_force = irandom_range(1,3);
         
          //INSTANCE
  
-// var inst,angle,rot,point_x,point_y; || YELLOW INST
+// YELLOW INST
  inst1 = instance_nearest(x,y,reg_entrance);
  point_x = irandom_range(inst1.x,(inst1.x+sprite_width));
  point_y = irandom_range(inst1.y,(inst1.y+sprite_height));
@@ -297,13 +297,18 @@ if phy_speed_x &gt; 0 || phy_speed_x &lt; 0 || phy_speed_y &gt; 0 || phy_speed_y
 else
  {image_speed=0;image_index=0};
  
+/* 
 draw_text(12,12,string('POINT_DIRECTION (ANGLE) = ')+string(round(point_direction(x,y,instance_nearest(x,y,reg_entrance).x,instance_nearest(x,y,reg_entrance).y))));
 draw_text(12,24,string('PHY_ROTATION = ')+string(abs(round(phy_rotation))));
 // OLD
+/*
 draw_text(12,36,string('ROT SUMMARY = ')+string((rot+180)-360));
 draw_text(12,48,string('FORMULA = ')+string(rot-(360-angle)));
-draw_text(12,60,string('ROT = ')+string(rot));
+*/
+//draw_text(12,60,string('ROT = ')+string(rot));
+
 // NEW
+/*
 draw_text(12,72,string('NEW_ROT SUMMARY = ')+string((phy_rotation+180)-360));
 draw_text(12,84,string('NEW_FORMULA = ')+string(phy_rotation-(360-angle)));
 draw_text(12,96,string('NEW_ROT = ')+string(phy_rotation));
@@ -313,6 +318,21 @@ draw_text(12,120,string('POINT_DISTANCE2 = ')+string(point_distance(x,y,point_x2
 //draw_text(12,108,string(rot180));
 draw_text(12,132,string('GLOBAL_SEATS = ')+string(global.seats));
 draw_text(12,144,string('COLLISION LINE = ')+string(collision_line(x,y,l_pointx,l_pointy,reg_collision,true,true)));
+
+{
+ var i,debug;
+ for (i = 0; i &lt; 10; i += 1)
+    {
+     debug = 'TEXT';
+     draw_text(12,12+(i*12),string(i)+string(' ')+string(debug));
+     if i = 1
+     {debug = 'GAVNO'};
+    }
+ }
+*/
+
+scr_draw_passenger();
+
 
 draw_text(x,y,string(stage));
 // DEBUG

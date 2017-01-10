@@ -38,9 +38,7 @@
     <background>background\bgr_stop</background>
     <background>background\bgr_trainroad</background>
   </backgrounds>
-  <paths name="paths">
-    <path>paths\path0</path>
-  </paths>
+  <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="save/load system">
       <script>scripts\scr_load.gml</script>
@@ -61,6 +59,7 @@
       <script>scripts\scr_ai_colliding.gml</script>
       <script>scripts\scr_ai_routing.gml</script>
     </scripts>
+    <script>scripts\scr_draw_passenger.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_bus</object>

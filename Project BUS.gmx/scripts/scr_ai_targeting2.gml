@@ -51,7 +51,7 @@ if rot != ang_rot
    if rot180 < 180
     {
      if ang_rot < rot180
-      {if ang_rot - rot > 5
+      {if abs(ang_rot - rot) > 5
          {phy_rotation +=angular_force};
          else
          {phy_rotation +=angular_force_low};};

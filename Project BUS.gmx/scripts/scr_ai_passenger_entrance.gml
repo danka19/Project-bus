@@ -111,10 +111,8 @@
     if stage=4.2 
     {
       if global.motion=0 
-      
         if round(point_distance(x,y,point_x,point_y)) >= 10
         {scr_ai_targeting2()};
-    
         else 
       {
       inst = inst3;
