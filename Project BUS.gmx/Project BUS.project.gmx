@@ -58,6 +58,7 @@
       </scripts>
       <script>scripts\scr_ai_colliding.gml</script>
       <script>scripts\scr_ai_routing.gml</script>
+      <script>scripts\scr_ai_col_rouing.gml</script>
     </scripts>
     <script>scripts\scr_draw_passenger.gml</script>
   </scripts>

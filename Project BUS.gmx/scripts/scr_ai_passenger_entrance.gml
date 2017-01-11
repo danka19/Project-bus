@@ -27,7 +27,11 @@
 //   if !place_meeting(x,y,inst)
    if global.motion = 0
    if round(point_distance(x,y,point_x,point_y)) >= 10
-     {scr_ai_targeting2()};
+     {scr_ai_routing();
+      if ai_stage > 0
+       {};
+      else
+       {scr_ai_targeting2()};};
      
    else
      {
@@ -47,7 +51,16 @@
 //    if !place_meeting(x,y,inst)
 //
     if round(point_distance(x,y,point_x2,point_y2)) >= 10
-     {scr_ai_targeting2()};
+     {scr_ai_routing();
+      if ai_stage > 0
+       {};
+      else
+       {scr_ai_routing();
+        if ai_stage > 0
+         {};
+        else
+         {scr_ai_targeting2()};};;
+     };
      
     else
      {
@@ -77,7 +90,11 @@
            {scr_ai_targeting3()};
          };
         else
-         {scr_ai_targeting2()};
+         {scr_ai_routing();
+          if ai_stage > 0
+          {};
+        else
+         {scr_ai_targeting2()};};
        };
        else
         {next_seat+=1;
@@ -88,7 +105,11 @@
         };
       };
     else
-     {scr_ai_targeting2();};
+     {scr_ai_routing();
+      if ai_stage > 0
+       {};
+      else
+       {scr_ai_targeting2()};};
     };
 
     //дописать, чтобы спрайт на сидячего менялся    
@@ -99,7 +120,11 @@
     if (stage = 4.1) && (global.stop = global.station)
      {
       if round(point_distance(x,y,point_x2,point_y2)) >= 10
-      {scr_ai_targeting2()};
+      {scr_ai_routing();
+       if ai_stage > 0
+        {};
+       else
+        {scr_ai_targeting2()};};
       
     else
      {
@@ -115,13 +140,17 @@
     {
       if global.motion=0 
         if round(point_distance(x,y,point_x,point_y)) >= 10
-        {scr_ai_targeting2()};
-        else 
-      {
-      inst = inst3;
-      angle = round(point_direction(x,y,point_x3,point_y3)); 
-      stage=4.3;
-      }; 
+        {scr_ai_routing();
+         if ai_stage > 0
+          {};
+         else
+          {scr_ai_targeting2()};};
+         else 
+          {
+          inst = inst3;
+          angle = round(point_direction(x,y,point_x3,point_y3)); 
+          stage=4.3;
+          }; 
     };  
       
 //STAGE 4.3
@@ -129,7 +158,11 @@
     if stage=4.3
     {
      if round(point_distance(x,y,point_x3,point_y3)) >= 10
-     {scr_ai_targeting2()};
+     {scr_ai_routing();
+      if ai_stage > 0
+       {};
+      else
+       {scr_ai_targeting2()};};
  
      else
      {stage=5;};

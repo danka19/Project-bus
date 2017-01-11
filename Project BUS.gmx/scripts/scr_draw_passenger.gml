@@ -19,9 +19,9 @@
    if i = 6
    {str='Collision Line= '+string(collision_line(x,y,l_pointx,l_pointy,reg_collision,true,true))};
    if i = 7
-   {str='Phy_position_y= '+string(phy_position_y)};
+   {str='Place_meeting= '+string(place_meeting(l_pointx+(4),l_pointy+(4),reg_collision))};
    if i = 8
-   {str='Phy_inertia= '+string(phy_inertia)};
+   {str='AI_STAGE= '+string(ai_stage)};
  //  if i = 9
  //  {str='Imp= '+string(imp)};
     draw_text(12,12+(i*12),string(i)+". "+string(str));

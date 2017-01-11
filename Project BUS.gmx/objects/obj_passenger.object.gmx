@@ -27,11 +27,22 @@
             <kind>1</kind>
             <string>
 
+// AI ОБХОДЯШКИ SYSTEM
+ai_stage = 0;
+ai_col = 0;
+ai_point = 0;
+ai_pointx = 0;
+ai_pointx1 = 0;
+ai_pointx2 = 0;
+ai_pointy1 = 0;
+ai_pointy2 = 0;
+
 //passenger numbrr
 
 //global.pass_id=id;
-global.sum_pass++;
-global.pass_num=global.sum_pass;
+global.sum_pass++;                                   // Passengers summary
+global.pass_num=global.sum_pass;                    // ?Current number of passenger
+global.pass_id[global.pass_num] = id;              //   Passenger id
 
 //STATIONS
 global.stop= irandom_range(global.station+1,global.sum_station);
@@ -214,6 +225,11 @@ l_pointx = x+lengthdir_x(15,image_angle);
 l_pointy = y+lengthdir_y(15,image_angle);
 
 rot = round(phy_rotation);
+
+scr_ai_routing();
+scr_ai_col_rouing();
+
+
 //angle = round(point_direction(x,y,point_x,point_y));
  
 /*

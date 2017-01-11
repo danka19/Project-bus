@@ -1,5 +1,5 @@
 
-
+/*
 if distance_to_object(obj_passenger) < 2
  { 
  var col_inst, col_angle, col_ang_rot;
