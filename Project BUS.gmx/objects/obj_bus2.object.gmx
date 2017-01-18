@@ -240,7 +240,6 @@ image_speed = 0;
 
 
 
-
 //debug
 draw_text(170,12,string('alarm0 = ')+string(alarm[0]));
 draw_text(170,24,string('alarm1 = ')+string(alarm[1]));
@@ -270,7 +269,7 @@ draw_text(170,60,string('pass_id= ')+string(global.pass_id[global.pass_num]));
           <argument>
             <kind>1</kind>
             <string>
-//alarm[1]=1;
+alarm[1]=1;
 </string>
           </argument>
         </arguments>
