@@ -1,4 +1,4 @@
-
+/*
 
 if collision_line(x,y,l_pointx,l_pointy,reg_collision,true,true) != -4
  {
@@ -61,5 +61,5 @@ if collision_line(x,y,l_pointx,l_pointy,reg_collision,true,true) != -4
   else
   {
   };
-*/
- };
+
+ };*/
