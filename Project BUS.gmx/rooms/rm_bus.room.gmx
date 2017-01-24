@@ -43,7 +43,7 @@ randomize();</code>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
-    <view visible="-1" objName="&lt;undefined&gt;" xview="0" yview="0" wview="320" hview="480" xport="0" yport="0" wport="640" hport="480" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
+    <view visible="-1" objName="obj_bus" xview="0" yview="0" wview="320" hview="480" xport="0" yport="0" wport="640" hport="480" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="640" hview="480" xport="0" yport="0" wport="640" hport="480" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="640" hview="480" xport="0" yport="0" wport="640" hport="480" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="640" hview="480" xport="0" yport="0" wport="640" hport="480" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
@@ -53,14 +53,13 @@ randomize();</code>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="640" hview="480" xport="0" yport="0" wport="640" hport="480" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="&lt;undefined&gt;" x="0" y="0" name="inst_3CEDDF42" locked="0" code="" scaleX="0" scaleY="0" colour="0" rotation="0"/>
-    <instance objName="&lt;undefined&gt;" x="0" y="0" name="inst_EF4425E7" locked="0" code="" scaleX="0" scaleY="0" colour="0" rotation="0"/>
     <instance objName="obj_bus2" x="120" y="120" name="inst_11F128B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="reg_inside" x="144" y="168" name="inst_41CEA308" locked="0" code="" scaleX="8" scaleY="8" colour="4294967295" rotation="0"/>
     <instance objName="reg_inside" x="144" y="264" name="inst_451316AC" locked="0" code="" scaleX="8" scaleY="8" colour="4294967295" rotation="0"/>
     <instance objName="reg_station" x="288" y="166" name="inst_A05CA2CB" locked="0" code="" scaleX="-11.5" scaleY="41.5" colour="4294967295" rotation="0"/>
     <instance objName="reg_entrance" x="192" y="168" name="inst_2BCB87FF" locked="0" code="" scaleX="8" scaleY="8" colour="4294967295" rotation="0"/>
     <instance objName="reg_entrance" x="192" y="264" name="inst_C64BF844" locked="0" code="" scaleX="8" scaleY="8" colour="4294967295" rotation="0"/>
+    <instance objName="obj_passenger_seat" x="144" y="-24" name="inst_4A55D434" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="reg_collision" x="189" y="288" name="inst_1234C66E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="reg_collision" x="129" y="333" name="inst_2CA57F2C" locked="0" code="" scaleX="18" scaleY="0.125" colour="4294967295" rotation="0"/>
     <instance objName="reg_collision" x="189" y="312" name="inst_C58B285E" locked="0" code="" scaleX="1" scaleY="1.04166662693024" colour="4294967295" rotation="-16"/>
