@@ -25,23 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>// PASSENGERS CREATION
 
-// COST OF FARE
-global.fare_cost = 1;
-
-
-//PASSENGERS SUMM
-
-    
+    // repeat(5)
+    //{instance_create(irandom_range(240,288),irandom_range(144,360),obj_passenger);};
    
   global.sum_pass=0; // Passengers summary
   global.pass_id=0; //  Current (created) passenger id
   
- // repeat(2)
-  //  {instance_create(irandom_range(240,288),irandom_range(144,360),obj_passenger);};
-    
-    
+  
 //MOTION
  global.motion=0;
 
@@ -86,8 +78,8 @@ sec_at_stop=10;
 
 {instance_create(irandom_range(240,288),irandom_range(144,360),obj_passenger);};  
 
-
-/*repeat(1)
+/*
+repeat(8)
  {
  {instance_create(irandom_range(240,288),irandom_range(144,360),obj_passenger);};  
  };
@@ -248,6 +240,7 @@ image_speed = 0;
 
 
 
+
 //debug
 draw_text(170,12,string('alarm0 = ')+string(alarm[0]));
 draw_text(170,24,string('alarm1 = ')+string(alarm[1]));
@@ -277,7 +270,7 @@ draw_text(170,60,string('pass_id= ')+string(global.pass_id[global.pass_num]));
           <argument>
             <kind>1</kind>
             <string>
-alarm[1]=1;
+//alarm[1]=1;
 </string>
           </argument>
         </arguments>

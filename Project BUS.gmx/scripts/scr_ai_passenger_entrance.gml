@@ -116,8 +116,8 @@
     
        
 //STAGE 4.1
-    
-    if (stage = 4.1) && (stop = global.station)
+
+    if (stage = 4.1) && (global.stop = global.station)
      {
       if round(point_distance(x,y,point_x2,point_y2)) >= 10
       {scr_ai_routing();
