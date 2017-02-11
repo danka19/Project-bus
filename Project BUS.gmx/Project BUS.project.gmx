@@ -84,6 +84,7 @@
   <rooms name="rooms">
     <room>rooms\rm_main</room>
     <room>rooms\rm_bus</room>
+    <room>rooms\room2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
